@@ -138,3 +138,24 @@ for (var i = 0; i < finances.length; i++) {
 
 console.log(total);
   
+// Create array of change in finances
+var financeChanges = [867884]
+
+
+for (let i = 0; i < finances.length - 1; i++) {
+    financeChanges.push(finances[i + 1][1] - finances[i][1]);
+    
+} 
+console.log(financeChanges)
+// Find total changes
+for (var i = 0; i < finances.length; i++) {
+    profLoss = profLoss + financeChanges[i];
+   // console.log(profLoss);
+}
+
+console.log(profLoss)
+
+// Average of the changes
+var avgChange = profLoss / finances.length;
+
+console.log(avgChange);
