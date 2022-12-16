@@ -1,5 +1,38 @@
-var date
-var profLoss
+// The total number of months included in the data set
+// find out length of data array
+
+// the net total amount of profit/loss over the entire period
+// loop through the finances array and get the value of the profit/losses by accessing it manually
+// var total = 0
+// for i in finances
+// total = total + finances[i][1]
+
+// average of the change in profLoss over the entire period
+//  create new array called financeChanges to store changes for each month
+// loop finances array and calculate the changes 
+// for i in fnances
+//  var profitLoss = finances[i][1]
+//  financeChanges.push(finances[i+1][1] - finances[i][1])
+//  be careful of last month finances [i+1] will not exist
+// find out the lenght of financeChanges array
+// Calculate the total changes using the same method as the previous question
+// calculate the average
+
+// The greatest increase in profits (date and amount) over the entire period
+// var highestEarning = 0
+// for i in fnanceChanges
+//  compare financeChanges[i] with highestEarning
+//  if financeChanges[i] > highestEarning then replace highestEarning with financeChanges[i]
+// or use Math.max() or sort from highest to lowest and get value of first index
+// to get the date - 
+// Find the index of the maximum eleement in fnanceChanges array
+// Get the month from finance array 
+
+// Calculate the greatest decrease in losses - same as above
+
+
+// Create two versions - greatest increase assuming 'Dec 2009' is changing to OR from 0
+
 
 var finances = [
 ['Jan-2010', 867884],
@@ -90,6 +123,18 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+var date = 0;
+var profLoss = 0;
+var total = 0
+
 // Amount of months
-var numMonths = finances.length
+var numMonths = finances.length;
 console.log(numMonths);
+
+// Net amount of Profit/Losses
+for (var i = 0; i < finances.length; i++) {
+    total = total + finances[i][1];
+}
+
+console.log(total);
+  
